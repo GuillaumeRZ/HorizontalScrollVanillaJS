@@ -48,7 +48,7 @@
 
     function scrollKey(event) {
       /* This is the key we just pressed */
-      const keyPressed = 35;
+      const keyPressed = event.keyCode;
 
       switch (keyPressed) {
         case 40: /* Arrow-Down */
@@ -74,6 +74,10 @@
         case 36: /* Home */
           event.preventDefault();
           window.scroll(window.scrollX - document.body.scrollWidth, window.scrollY);
+          break;
+        case 32: /* Space Bar */
+          event.preventDefault();
+          window.scroll(window.scrollX + 832, window.scrollY);
           break;
       }
     }
